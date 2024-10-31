@@ -387,8 +387,14 @@
                     <div class="footform-box flex">
                         <p>기업명</p>
                         <input type="text" name="company">
+                        <p>담당자</p>
+                        <input type="text" name="manager">
+                    </div>
+                    <div class="footform-box flex">
                         <p>연락처</p>
                         <input type="text" name="contact">
+                        <p>이메일</p>
+                        <input type="text" name="email">
                     </div>
                     <div class="footform-box2 flex">
                         <p>문의내용</p>
@@ -449,6 +455,11 @@
             frm.contact.focus();
             return false;
         }
+        if (frm.email.value == '') {
+            alert('이메일을 입력해주세요');
+            frm.contact.focus();
+            return false;
+        }
         if (frm.contents.value == '') {
             alert('문의내용을 입력해주세요');
             frm.contents.focus();
@@ -458,6 +469,7 @@
         frm.action = "https://script.google.com/macros/s/AKfycbwjaxK242_UJ3G0_s6SKT1ZgmPmhC_PQmLwzHZHglhgMc_Pg_f-IZY6MGAVm5JQpNJg/exec";
         frm.submit();
 
+        jQuery('form input, textarea').val('');
         alert('문의 내용이 등록되었습니다.'); return false;
     }
 </script>
