@@ -1,0 +1,764 @@
+
+<html>
+<head>
+	<title>365평생교육원</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=no">
+	<link rel="stylesheet" href="css/default.css?ver=202312061515">
+	<link rel="stylesheet" href="css/style.css?ver=202312061515">
+	<link rel="stylesheet" href="css/font.css?ver=202312061515">
+	<link rel="stylesheet" href="css/layout.css?ver=202312061515">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="https://365edu.krimg/favicon.ico">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="365평생교육원">
+	<meta property="og:image" content="http://365eduone.co.kr/img/og_img.png">
+	<meta property="og:url" content="http://365eduone.co.kr/">
+	<meta property="og:description" content="고용노동부 공식인증 직업능력개발 위탁기관">
+	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="common/js/bootstrap.js"></script>
+	<script type="text/javascript" src="common/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var bSend_ing = false;
+			$("#submit_btn").click(function(){
+				if ( bSend_ing ){
+					alert("이미 신청하셨습니다.");
+					return;
+				}
+				if($("input[name='company']").val() ==""){
+					alert('기업명을 입력하세요');
+					$("input[name='company']").focus();
+					return false;
+				}
+				if($("input[name='cnt']").val() ==""){
+					alert('직원수를 입력하세요');
+					$("input[name='cnt']").focus();
+					return false;
+				}
+				if($("input[name='manager']").val() ==""){
+					alert('담당자명을 입력하세요');
+					$("input[name='manager']").focus();
+					return false;
+				}
+				if($("input[name='email']").val() ==""){
+					alert('이메일을 입력하세요');
+					$("input[name='email']").focus();
+					return false;
+				}
+				if( !$("input[name='email']").val().match("@") ) {
+					alert('이메일을 확인해주세요');
+					$("input[name='email']").focus();
+					return false;
+				}
+				if($("input[name='contact']").val() ==""){
+					alert('연락처를 입력하세요');
+					$("input[name='contact']").focus();
+					return false;
+				}
+				if($("textarea[name='contents']").val() ==""){
+					alert('문의내용을 입력하세요');
+					$("textarea[name='contents']").focus();
+					return false;
+				}
+				if ( $("#user_agree").length ) {
+					if(!$("#user_agree").is(":checked")){
+						alert("개인정보취급방침에 동의해주세요");
+						return false;
+					}
+				}
+				$("#user_referrer").val(document.referrer);
+
+				bSend_ing = true;
+				
+				var frm = jQuery(this).closest('form')[0];
+				frm.action = "https://script.google.com/macros/s/AKfycbwjaxK242_UJ3G0_s6SKT1ZgmPmhC_PQmLwzHZHglhgMc_Pg_f-IZY6MGAVm5JQpNJg/exec";
+       				frm.submit();
+
+        			jQuery('form input, textarea').val('');
+        			alert('문의 내용이 등록되었습니다.'); return false;
+				
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	﻿<nav class="header-wrap">
+    <a class="logo" href="/"></a>
+    <a class="hamburger togClass">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <ul class="header">
+        <li><a href="#section3">토탈교육솔루션</a></li>
+        <li><a href="#section6">법정의무교육</a></li>
+        <li><a href="#section7">산업안전보건교육</a></li>
+        <li><a href="https://www.365eduone.kr">원격평생교육원</a></li>
+        <!--<li><a href="#">강사프로필</a></li>-->
+    </ul>
+</nav>
+<div id="top-logos">
+   <div class="image-box">
+      <div><img src="img/top-logo-1.svg" height="40px"/></div>
+      <!-- div><img src="img/top-logo-2.svg" height="32px"/></div -->
+      <!--<div><img src="img/top-logo-3.svg" height="28px"/></div>-->
+      <!--   clone     -->
+      <!--<div class="clone"><img src="img/top-logo-1.svg" height="40px"/></div>-->
+      <!--<div class="clone"><img src="img/top-logo-2.svg" height="32px"/></div>-->
+      <!-- <div class="clone"><img src="img/top-logo-3.svg" height="28px"/></div>-->
+   </div>
+</div>	<div id="content-wrap">
+		<div class="section section1" name="section1">
+			<div class="section-title">
+				<h2>신뢰할 수 있는 기업교육</h2>
+				<img src="img/logo.svg">
+			</div>
+			<div class="flex justify-center mt-16 lg">
+				<div>
+					<img src="img/award1.png?ver=220928">
+				</div>
+				<div class="ml-4 mr-4">
+					<img src="img/award2.png?ver=220928">
+				</div>
+				<div>
+					<img src="img/award3.png?ver=220928">
+				</div>
+			</div>
+			<div class="flex justify-center mt-16 md slider">
+				<div>
+					<img src="img/award1.png?ver=220928">
+				</div>
+				<div>
+					<img src="img/award2.png?ver=220928">
+				</div>
+				<div>
+					<img src="img/award3.png?ver=220928">
+				</div>
+			</div>
+		</div>
+		<div class="section2">
+			<ul class="flex justify-center">
+				<li onclick="location.href='https://365eduone.kr/web/html/01_product/index.php?category1=LCT005'"><strong>법정의무교육</strong><span>교육청 등록<br>
+				고용노동부 지정<br>
+				위탁교육기관</span></li>
+				<li onclick="location.href='https://365eduone.kr/web/html/01_product/index.php?category1=LCT001'"><strong>직무교육</strong><span>국가직무능력표준 기반 교육<br>
+				산업현장 직무 중심의<br>
+				인적자원 개발</span></li>
+				<li onclick="location.href='https://365eduone.kr/web/html/01_product/index.php?category1=LCT007'"><strong>산업안전보건교육</strong><span>온라인에서 집체교육까지!<br>
+				사업장 맞춤 교육 제공</span></li>
+			</ul>
+		</div>
+		<div class="section section3">
+			<div class="section-title text-center">
+				<h2>대한민국 No.1 토탈교육솔루션</h2>
+				<img src="img/logo.svg" class="m-auto">
+			</div>
+			<div class="card mt-16 lg">
+				<object type="image/svg+xml" data="img/section3-1.svg?ver=221225" width="999px" class="m-auto"></object>
+			</div>
+			<div class="mt-8 md">
+				<object type="image/svg+xml" data="img/section3-1-sm.svg" width="100%" class="m-auto"></object>
+				<div class="slider-wrap">
+					<div class="slider">
+						<div class="card">
+							<img src="img/section3-2-sm.png" width="36px">
+							<h5 class="mt-4">온라인교육</h5>
+							<p class="fc-purpleblue mt-4">
+								사업장 종사자들의 법정교육과 직무역량 강화교육을 온라인으로 수강하세요
+							</p>
+							<ul class="mt-4">
+								<li>법정의무교육</li>
+								<li>산업안전보건교육</li>
+								<li>직종별, 직군별 직무교육</li>
+							</ul>
+						</div>
+						<div class="card">
+							<img src="img/section3-3-sm.png" width="36px">
+							<h5 class="mt-4">오프라인 교육</h5>
+							<p class="fc-purpleblue mt-4">
+								사업장의 니즈를 반영하여 맞춤형 교육 컨텐츠를 제공합니다.
+							</p>
+							<ul class="mt-4">
+								<li>신입사원교육</li>
+								<li>직무역량향상교육</li>
+								<li>전직교육</li>
+								<li>CS, 리더쉽, 커뮤니케이션 등</li>
+							</ul>
+						</div>
+						<div class="card">
+							<img src="img/section3-4-sm.png" width="36px">
+							<h5 class="mt-4">세무노무 정보제공</h5>
+							<p class="fc-purpleblue mt-4">
+								기업경영에 필요한 세무, 노무관련 교육 및 정보를 제공합니다.
+							</p>
+							<ul class="mt-4">
+								<li>중소기업 경영지원 (중소기업지원연구소)</li>
+								<li>세금환급 및 절세안 (세무법인 프라이어)</li>
+								<li>고용지원금 활용안 (노무법인 위드예스)</li>
+								<li>4대보험 절감안 (노무법인 위드예스)</li>
+							</ul>
+						</div>
+						<div class="card">
+							<img src="img/section3-5-sm.png" width="36px">
+							<h5 class="mt-4">사업주 훈련</h5>
+							<p class="fc-purpleblue mt-4">
+								사업장 종사자들의 법정교육과 직무역량 강화교육을 온라인으로 수강하세요
+							</p>
+							<ul class="mt-4">
+								<li>사업주 자체교육</li>
+								<li>사업주 환급교육</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section section4 text-center">
+			<ul class="flex justify-center items-center">
+				<li><img src="img/section4-2.png" width="114px"><br>
+				<span>교육비 최대 100% 지원<br>
+				&nbsp;</span></li>
+				<li><img src="img/section4-3.png" width="114px"><br>
+				<span>고용노동부 공식인증 <br>
+				직업능력개발 위탁기관</span></li>
+				<li><img src="img/section4-4.png" width="114px"><br>
+				<span>다양한 부가서비스 제공<br>
+				&nbsp;</span></li>
+			</ul>
+		</div>
+		<div class="section section5 text-center">
+			<h4>대한민국 직장인이라면 꼭 들어야할</h4>
+			<h2>법정의무교육</h2>
+			<div class="lg justify-center">
+				<img src="img/section5-1.png" width="1087px">
+			</div>
+			<div class="md">
+				<img src="img/section5-1-sm.png" width="100%">
+			</div>
+			<div class="flex justify-center items-end mb-8 mt-8 lg">
+				<h3>이 6가지 교육이&nbsp;</h3>
+				<img src="img/section5-2.png">
+				<h3>%&nbsp;</h3>
+				<img src="img/section5-3.png">
+			</div>
+			<div class="mb-8 mt-8 md">
+				<h3>이 6가지 교육이</h3>
+				<div class="flex justify-center items-end mt-4">
+					<img src="img/section5-2.png" width="85px">
+					<h3>%&nbsp;</h3>
+					<img src="img/section5-3.png" width="93px">
+				</div>
+			</div>
+			<p>
+				365평생교육원은 <br>
+				법정필수교육의 모든 과정을 <br>
+				<b>온라인 수강가능</b>합니다.
+			</p>
+		</div>
+		<div class="section section6 text-center">
+			<h4>365평생교육원의 온라인 법정의무교육</h4>
+			<h2 class="mt-8"><b class="fc-blue">법정의무교육 과목</b>안내</h2>
+			<div class="lg">
+				<ul class="flex justify-center items-center mt-16">
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1025&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='"><img src="img/section6-1.png" height="460px"></li>
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1026&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='"><img src="img/section6-2.png" height="460px"></li>
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1027&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='"><img src="img/section6-3.png" height="460px"></li>
+				</ul>
+				<ul class="flex justify-center items-center mt-12">
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1028&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='"><img src="img/section6-4.png" height="460px"></li>
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1029&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='"><img src="img/section6-5.png" height="460px"></li>
+					<li onclick="location.href='https://365eduone.kr/web/html/01_product/index.php?category1=LCT007'"><img src="img/section6-6.png" height="460px"></li>
+				</ul>
+			</div>
+			<div class="md slider mt-12">
+				<div onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1025&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='">
+					<img src="img/section6-1.png">
+				</div>
+				<div onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1026&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='">
+					<img src="img/section6-2.png">
+				</div>
+				<div onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1027&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='">
+					<img src="img/section6-3.png">
+				</div>
+				<div onclick="location.href='https://365eduone.kr/web/html/01_product/view.php?LCode=1028&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='">
+					<img src="img/section6-4.png">
+				</div>
+				<div onclick="https://365eduone.kr/web/html/01_product/view.php?LCode=1029&page=1&keyword=&keyfield=&category1=LCT005&category2=&category3='">
+					<img src="img/section6-5.png">
+				</div>
+				<div onclick="location.href='https://365eduone.kr/web/html/01_product/index.php?category1=LCT007'">
+					<img src="img/section6-6.png">
+				</div>
+			</div>
+		</div>
+		<div class="section section7 text-center">
+			<h4>직장인의 안전하고 건강한 회사생활을 위한</h4>
+			<h2 class="mt-8">산업안전보건교육</h2>
+			<div class="mt-16 lg">
+				<img src="img/section7-1.png" width="1090px">
+			</div>
+			<div class="mt-16 md">
+				<img src="img/section7-sm.png" width="100%">
+			</div>
+		</div>
+		<div class="section8">
+			<p>
+				직장 내 성희롱 예방, 개인정보보호, <br>
+				직장 내 장애인 인식개선, <br>
+				산업안전 보건교육은 <br>
+				<b class="fc-yellow">교육하지 않을 경우 패널티가 부여</b>됩니다.
+			</p>
+		</div>
+		<div class="section section9 text-center">
+			<h4>여러분의 회사는 어떤 업종에 해당하시나요?</h4>
+			<h2 class="mt-8">업종별 법정의무교육 과정</h2>
+			<div class="mt-16 lg">
+				<img src="img/section9.png?ver=220901" width="1090px">
+			</div>
+			<div class="mt-16 md">
+				<img src="img/section9-1-sm.png?ver=220901" width="100%"><img src="img/section9-2-sm.png" width="100%"><img src="img/section9-3-sm.png" width="100%"><img src="img/section9-4-sm.png" width="100%">
+			</div>
+		</div>
+		<div class="section section11 text-center">
+			<h4>법정의무교육, 받고 싶은데 어떻게 하면 되나요?</h4>
+			<h2 class="mt-8"><b class="fc-blue">대표질문</b> 살펴보기</h2>
+			<div class="accordion-list mt-16">
+				<ul>
+					<li>
+					<dl>
+						<dt class="acc-trigger">
+						<button type="button">
+						<span>Q</span>
+						<strong>법정의무교육은 <b>어디서</b> 받아야 하나요?</strong>
+						</button>
+						</dt>
+						<dd class="acc-target">
+						<span>A</span>
+						<div class="desc">
+							<div>
+								 고용노동부에 등록된 교육기관에 위탁하여 실시해야 합니다.<br>
+								 최근 고용노동부 직원(또는 산하기관)임을 사칭하여 교육을 강요하거나 교육을 빌미로 각종 보험상품 판매 등 교육과<br>
+								 관계 없는 행위를 하는 경우가 많습니다.<br>
+								<br>
+								 등록된 교육기관이 아닌 곳에서 교육을 실시하거나 법에서 정한 기준에 맞지 않는 교육을 받는경우에는 교육실적으로<br>
+								 인정받지 못해 사업장에 큰 피해가 발생할 수 있습니다.<br>
+								<br>
+								<b class="fc-darkblue">저희 365평생교육원은 고용 노동부 지정 위탁기관으로 온라인 및 오프라인 교육을 병행하고있으며 ,<br>
+								 사업장별 맞춤교육을 통해 안전하게 법정 의무교육을 이수 할 수 있습니다.</b>
+							</div>
+						</div>
+						</dd>
+					</dl>
+					</li>
+					<li>
+					<dl>
+						<dt class="acc-trigger">
+						<button type="button">
+						<span>Q</span>
+						<strong>법정의무교육의 <b>종류</b>는 무엇이 있나요?</strong>
+						</button>
+						</dt>
+						<dd class="acc-target">
+						<span>A</span>
+						<div class="desc">
+							<div>
+								 각 기업 및 단체에서 받아야 하는 의무교육은 업종 및 업무에 따라 상이합니다. 크게 분류하면<br>
+								<b class="fc-darkblue">산업안전보건교육과 4대법정의무교육</b>으로 분류됩니다.<br>
+								<br>
+								 산업안전보건교육 대상 사업장의 경우 매 분기별 업종 및 업무에 따라 3~6시간 이수하셔야합니다.<br>
+								<b class="fc-darkblue">법정의무교육은 직장 내 성희롱예방교육, 개인정보보호교육, 직장 내 장애인인식개선교육, 직장 내 괴롭힘 방지교육,<br>
+								 퇴직연금교육 등</b>이 대표적인 의무교육입니다. 법정의무교육은 매년 1회 이상, 1시간 이상 이수를 하셔야 합니다.
+							</div>
+						</div>
+						</dd>
+					</dl>
+					</li>
+					<li>
+					<dl>
+						<dt class="acc-trigger">
+						<button type="button">
+						<span>Q</span>
+						<strong>법정의무교육은 <b>정해진 시간에</b>만 받을 수 있나요?</strong>
+						</button>
+						</dt>
+						<dd class="acc-target">
+						<span>A</span>
+						<div class="desc">
+							<div>
+								 스마트러닝 시스템 체계를 구축하고 있으므로, <b class="fc-darkblue">언제 어디서나 상시 학습이 가능</b>합니다.
+							</div>
+						</div>
+						</dd>
+					</dl>
+					</li>
+					<li>
+					<dl>
+						<dt class="acc-trigger">
+						<button type="button">
+						<span>Q</span>
+						<strong>법정의무교육을 <b>이수하지 않으면</b> 어떻게 되나요?</strong>
+						</button>
+						</dt>
+						<dd class="acc-target">
+						<span>A</span>
+						<div class="desc">
+							<div>
+								 법정의무교육은 모든 근로자는 법적으로 이수해야하는 의무교육입니다. 미실시 시 사업자는 <b class="fc-darkblue">최소 300만원에서<br>
+								 최대 5억까지 과태료</b>가 부과될 수 있습니다.
+							</div>
+							<table class="mt-8">
+							<thead>
+							<tr>
+								<th>
+									구분
+								</th>
+								<th>
+									관련법령
+								</th>
+								<th>
+									과태료
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									산업안전보건교육
+								</td>
+								<td>
+									산업안전보건법 제 31조
+								</td>
+								<td>
+									500만원 이하의 과태료
+								</td>
+							</tr>
+							<tr>
+								<td>
+									직장 내 성희롱예방교육
+								</td>
+								<td>
+									남녀 고용 평등과 일 가정 양립<br>
+									지원에 관한 법률 제13조
+								</td>
+								<td>
+									500만원 이하의 과태료
+								</td>
+							</tr>
+							<tr>
+								<td>
+									개인정보보호교육
+								</td>
+								<td>
+									개인정보보호법 제 28조
+								</td>
+								<td>
+									사고·사건 발생시 최대 5억원 이하의 과징금
+								</td>
+							</tr>
+							<tr>
+								<td>
+									직장 내 장애인 인식개선교육
+								</td>
+								<td>
+									장애인 고용 촉진 및<br>
+									직업 재활법 제 5조의2
+								</td>
+								<td>
+									300만원 이하의 과태료
+								</td>
+							</tr>
+							<tr>
+								<td>
+									퇴직연금교육
+								</td>
+								<td>
+									근로자 퇴직급여 보장법 제 32조
+								</td>
+								<td>
+									1천만원 이하의 과태료
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						</dd>
+					</dl>
+					</li>
+					<li>
+					<dl>
+						<dt class="acc-trigger">
+						<button type="button">
+						<span>Q</span>
+						<strong>온라인 교육 <b>진행 절차</b>가 궁금해요</strong>
+						</button>
+						</dt>
+						<dd class="acc-target">
+						<span>A</span>
+						<div class="desc">
+							<div>
+								<img src="img/section11.png" width="100%">
+								<p class="fc-darkblue mt-8">
+									<strong>(주)365평생교육원은 신속한 교육진행을 위해 <strong class="bg-yellow">&nbsp;매주 2회 화/목 + 매월 1일 개강을 진행 </strong>&nbsp;하고 있습니다.</strong>
+								</p>
+							</div>
+						</div>
+						</dd>
+					</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="section section13">
+			<div class="cont_box">
+				<div class="cont_list cont_list2 cont_list_m cont_list_m1 cont_list_align">
+					<ul>
+						<li>
+							<div class="section_title_wrap">
+								<h4>누구나 할 수 있는 AI 브랜딩</h4>
+								<h2 class="mt-8">
+									<b class="color">Chat GPT</b><br>
+									과정 살펴보기
+								</h2>
+							</div>
+							<img src="img/section13_obj.png">
+						</li>
+						<li>
+							<div class="section_cont_wrap">
+								<div class="section_cont_title">
+									<b class="color">K-디지털 기초역량훈련</b>
+								</div>
+								<div class="section_cont_text">
+									디지털/신기술 분야에 관심있는 청년, 중/장년, 비전공자 누구나 온라인 교육을 통해 실무 능력을 키울 수 있도록 내일배움카드로 교육비를 지급하는 정부지원사업
+								</div>
+								<div class="section_cont_text">
+									<button>자세히보기</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section section12 text-center floating">
+			<div class="sub-tit">
+				<h2 class="color2">법정의무교육</h2>
+				<h4 class="mt-4">기업상담 문의</h4>
+			</div>
+			<form name="submit_form" id="submit_form" method="post" enctype="multipart/form-data" style="margin-bottom:0;" target="ifm">
+				<input type="hidden" name="user_clientkey" id="user_clientkey" value="3">
+				<input type="hidden" name="user_referrer" id="user_referrer" value="">
+				<div class="flex items-center">
+					<label>기업명</label><input type="text" name="company" id="company" maxlength="100" required>
+				</div>
+				<div class="flex items-center mt-2">
+					<label>직원수</label><input type="text" name="cnt" id="cnt" maxlength="100" required onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)">
+				</div>
+				<div class="flex items-center mt-2">
+					<label>담당자</label><input type="text" name="manager" id="manager" maxlength="100" required>
+				</div>
+				<div class="flex items-center mt-2">
+					<label>E-mail</label><input type="text" name="email" id="email" class="email_check" maxlength="100" required>
+				</div>
+				<div class="flex items-center mt-2">
+					<label>연락처</label><input type="text" name="contact" id="contact" class="tel_check" maxlength="13" placeholder="" onkeydown="return onlyNumber(event)" onkeyup="removeChar(event)" required>
+				</div>
+				<div class="flex items-start mt-2">
+					<label>문의내용</label><textarea rows="3" name="contents" id="contents" required></textarea>
+				</div>
+				<div class="flex items-center mt-2 agree_flex">
+					<span onclick='showPP();'>개인정보취급방침</span>
+					<input type="checkbox" name="user_agree" id="user_agree" value="Y" checked><label for="user_agree">동의</label>
+				</div>
+				<button type="button" id="submit_btn" class="mt-2"><b class="fc-mint">무료</b>상담신청</button>
+			</form>
+			<div class="floating_btn">
+										<a class="tel-btn" href="tel:02-6247-2205">
+							<strong class="pc">
+								02-6247-2205							</strong>
+							<strong class="mob">
+								전화상담
+							</strong>
+						</a>
+								<a class="top-btn" href="#section1"><i>TOP</i></a>
+				<a class="consult-btn" href="#section12"><strong>1:1 상담</strong></a>
+							</div>
+		</div>
+	</div>
+	<div class="modal_overlay"></div>
+<div class="modal">
+	<div class="modal_wrap section13_modal">
+		<div class="cont_modal">
+			<div class="cont_modal_box">
+				<div class="modal_title_wrap">
+					<div class="cont_title_wrap text-center">
+						<div class="cont_title_info">
+							누구나 할 수 있는 AI 브랜딩
+						</div>
+						<div class="cont_title">
+							<b>왕초보 <span class="color">Chat GPT</span> 과정</b>
+						</div>
+						<div class="close_wrap">
+							<div class="close"></div>
+						</div>
+					</div>
+				</div>
+				<div class="cont_text_wrap">
+					<div class="cont_text cont_text_inner text-center">
+						<b>[K-디지털 기초역량훈련]</b> 디지털/신기술 분야에 관심있는 청년, 중/장년, 비전공자 누구나<br>
+						온라인 교육을 통해 실무 능력을 키울 수 있도록 내일배움카드로 교육비를 지급하는 정부지원사업
+					</div>
+				</div>
+				<div class="cont_text_wrap section13_modal_box section13_modal_box1">
+					<div class="cont_list cont_list2 cont_list_m cont_list_m1">
+						<ul>
+							<li>
+								<div class="cont_text_box">
+									<div class="cont_text cont_text_inner cont_text_title modal_text_title">
+										Q.<b class="color">국민내일배움카드</b>란?
+									</div>
+									<div class="modal_text_box">
+										<div class="cont_text cont_text_inner">
+											취업, 창업 등을 목적으로 직업훈련이 필요한 국민들에게
+											정부(고용노동부)에서 국비로 훈련을 지원하는 제도
+										</div>
+										<div class="cont_text cont_text_inner">
+											<img src="img/section13_modal_obj01.jpg">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cont_text_box">
+									<div class="cont_text cont_text_inner cont_text_title modal_text_title">
+										Q.<b class="color">정부에서 지원</b>해주나요?
+									</div>
+									<div class="modal_text_box">
+										<div class="cont_text cont_text_inner">
+											기술력은 곧 국력! 정부가 키운다.<br>
+											AI인재!<br>
+											<b>90% 국비지원, 나머지 자부담금 10%도 완주 시 전액 환급!</b>
+										</div>
+										<div class="cont_text cont_text_inner cont_text_info">
+											(과정 완주시, 자부담금은 100% 환급)
+										</div>
+										<div class="cont_text cont_text_inner">
+											<img src="img/section13_modal_obj02.png">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont_text_wrap section13_modal_check">
+					<div class="cont_text">
+						<div class="cont_list cont_list1 cont_list_m cont_list_m1">
+							<ul>
+								<li>
+									Chat GPT 활용법을 터득하고 싶으신 분
+								</li>
+								<li>
+									인공지능 툴을 활용하여 브랜드 이미지를 제작하고 유튜브 쇼츠를 만들고자 하는 분
+								</li>
+								<li>
+									브랜딩과 홍보에 관심이 있는 모든 개인과 기업, 창업자, 디자이너, 마케터, 콘텐츠 크리에이터 등
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cont_text_wrap section13_modal_info">
+					<div class="cont_text text-center">
+						<img src="img/section13_modal_obj03.png">
+					</div>
+					<div class="cont_text">
+						<div class="cont_info">
+							<ul>
+								<li>
+									01. 인공지능의 시작
+								</li>
+								<li>
+									02. Chat GPT와 개인정보보호
+								</li>
+								<li>
+									03. Chat GPT 들어가기
+								</li>
+								<li>
+									04. Chat GPT를 더 잘 활용하는 웹스토어 알기
+								</li>
+								<li>
+									05. 인공지능과 소통하는 방법, 프롬프트
+								</li>
+								<li>
+									06. Chat GPT와 구글 검색을 한번에
+								</li>
+								<li>
+									07. AI를 활용한 영상 사례 분석
+								</li>
+								<li>
+									08. Chat GPT를 활용한 아이덴티티 구축하기
+								</li>
+								<li>
+									09. Chat GPT를 활용한 STP와 톤앤매너
+								</li>
+								<li>
+									10. Chat GPT를 활용한 기억에 남을 메뉴 스토리 만들기
+								</li>
+								<li>
+									11. Chat GPT를 활용한 최고의 이윤을 남기는 가격설정
+								</li>
+								<li>
+									12. AI를 활용한 나만의 브랜딩 홍보하기
+								</li>
+								<li>
+									13. 인공지능Tool을 활용한 유튜브 쇼츠 만들기
+								</li>
+								<li>
+									14. 인공지능Tool을 활용한 유튜브 쇼츠 만들기(2)
+								</li>
+								<li>
+									15. 인공지능Tool을 활용한 유튜브 쇼츠 만들기(3)
+								</li>
+								<li>
+									16. 인공지능Tool을 활용한 유튜브 쇼츠 만들기(4)
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<iframe name="ifrm" style="display: none;"></iframe>
+<script>
+	$('.section13 button').click(function(){
+		$(".modal").addClass("modal_in");
+		$(".modal_overlay").css("display","block");
+	});
+	$('.section13_modal .close_Wrap').click(function(){
+		$(".modal").removeClass("modal_in");
+		$(".modal_overlay").css("display","none");
+	});
+</script>	<div class="footer-wrap">
+    <div class="footer">
+        <p>
+            주소 : 서울 마포구 독막로 42, 3층(합정동, 남정빌딩)<br>
+            전화 : <a href="tel:1522-3019">1522-3019</a> <i class="lg">|&nbsp;</i><br class="md">사업자등록번호 : 127-86-62571 <i class="lg">|&nbsp;</i><br class="md">대표자 : 박현숙 <i class="lg">|&nbsp;</i><br class="md">개인정보관리책임자 : 이현옥<br>
+            이메일 :  <a href="mailto:info@365edu.kr">info@365edu.kr</a>
+        </p>
+    </div>
+</div>	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/main.js?ver=230331"></script>
+	<script>
+		$('path.cls-34').click(function(){
+			location.href='https://365edu.kr';
+		});
+		$('g.cls-1').click(function(){
+			location.href='https://365edu.kr';
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.82 31.82">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #059654;
+      }
+    </style>
+  </defs>
+  <g id="_레이어_1-2" data-name="레이어 1">
+    <circle class="cls-2" cx="15.91" cy="15.91" r="15.91"/>
+    <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt" class="cls-1" d="M24.95,19.87l-4.19-1.8c-.37-.16-.8-.05-1.05,.26l-1.86,2.27c-2.92-1.37-5.26-3.72-6.64-6.64l2.27-1.86c.31-.25,.41-.68,.26-1.05l-1.8-4.2c-.17-.4-.61-.62-1.03-.52l-3.9,.9c-.41,.09-.7,.46-.7,.88,0,9.6,7.78,17.38,17.38,17.38h0c.42,0,.78-.29,.88-.7l.9-3.9c.1-.43-.12-.86-.52-1.03h0Z"/>
+  </g>
+</svg>
